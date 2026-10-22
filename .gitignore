@@ -1,0 +1,30 @@
+
+# Android Studio
+.gradle/
+.idea/
+.kotlin/
+**/build/
+local.properties
+*.iml
+.externalNativeBuild/
+.cxx/
+captures/
+
+# Firebase configuration
+google-services.json
+**/google-services.json
+.env
+.env.*
+!.env.example
+serviceAccountKey.json
+*-firebase-adminsdk-*.json
+
+# React / Vite
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# OS files
+.DS_Store
+Thumbs.db

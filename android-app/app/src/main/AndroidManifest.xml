@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 인터넷 통신 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 현재 위치 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- 예약 알림 권한 -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- 휴대폰 재부팅 후 알림 복구용 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="응급 진단 앱"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:windowSoftInputMode="adjustResize"
+        android:theme="@style/Theme.MyApplication">
+        <activity
+            android:name=".HealthCalendarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MedicineRecordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MedicineActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InjuryRecordDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HospitalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ErrorReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AnalysisActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CameraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InjuryRecordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MyInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditHealthActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" /> <!-- ★ 내상 챗봇 화면 -->
+        <activity
+            android:name=".InternalChatActivity"
+            android:exported="false" /> <!-- 앱 시작 화면 -->
+        <activity android:name=".InternalRecordActivity" />
+        <activity android:name=".InternalRecordDetailActivity" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".HealthBenefitsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".PersonalHealthActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".HealthNewsActivity"
+            android:exported="false" />
+
+        <activity android:name=".HealthCardNewsActivity" android:exported="false" />
+
+        <activity android:name=".SeasonalHealthActivity" android:exported="false" />
+
+        <activity
+            android:name=".MedicineCheckActivity"
+            android:exported="false" />
+
+        <receiver
+            android:name=".MedicineAlarmReceiver"
+            android:exported="false" />
+
+        <receiver
+            android:name=".VisitReminderReceiver"
+            android:enabled="true"
+            android:exported="false" />
+
+        <receiver
+            android:name=".MedicineBootReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+</manifest>

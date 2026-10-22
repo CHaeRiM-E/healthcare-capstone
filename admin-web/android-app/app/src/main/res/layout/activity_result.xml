@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F6FF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="22dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <Button
+                android:id="@+id/btnHome"
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:text="⌂"
+                android:textSize="24sp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#5F86F2"
+                android:elevation="20dp" />
+
+            <TextView
+                android:layout_width="220dp"
+                android:layout_height="55dp"
+                android:text="상처 분석결과"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:layout_marginStart="28dp"
+                android:background="#FFFFFF"
+                android:textColor="#111111" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgWound"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="25dp"
+            android:background="#D9D9D9"
+            android:scaleType="fitCenter" />
+
+        <Button
+            android:id="@+id/btnRetake"
+            android:layout_width="120dp"
+            android:layout_height="45dp"
+            android:text="재촬영"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#5F86F2"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp" />
+
+        <TextView
+            android:id="@+id/txtResultName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="분석 결과"
+            android:textSize="42sp"
+            android:textStyle="bold"
+            android:textColor="#111111"
+            android:layout_marginTop="15dp" />
+
+        <!-- AI 신뢰도 -->
+        <TextView
+            android:id="@+id/txtConfidence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AI 분석 신뢰도 : -"
+            android:textSize="16sp"
+            android:textColor="#666666"
+            android:layout_marginTop="3dp" />
+
+
+        <!-- AI 탐지 점수 안내 문구 -->
+        <TextView
+            android:id="@+id/txtConfidenceGuide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="AI 모델의 탐지 점수이며, 실제 진단 정확도를 의미하지 않습니다."
+            android:textSize="12sp"
+            android:textColor="#757575" />
+
+
+        <Button
+            android:id="@+id/btnTriage"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:text="응급도 확인하기"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#5F86F2" />
+
+        <TextView
+            android:id="@+id/txtRisk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="위험 수준 : 문진 전"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#111111" />
+
+        <TextView
+            android:id="@+id/txtEmergency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="응급도 확인을 진행해주세요."
+            android:textSize="18sp"
+            android:textColor="#FF3333" />
+
+        <Button
+            android:id="@+id/btnChangeCategory"
+            android:layout_width="190dp"
+            android:layout_height="45dp"
+            android:text="상처 카테고리 재설정"
+            android:layout_gravity="end"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#111111" />
+
+        <LinearLayout
+            android:id="@+id/categoryBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:background="#FFFFFF"
+            android:padding="25dp">
+
+            <TextView
+                android:id="@+id/catScratch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="찰과상"
+                android:textSize="24sp"
+                android:padding="12dp" />
+
+            <TextView
+                android:id="@+id/catContusion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="타박상"
+                android:textSize="24sp"
+                android:padding="12dp" />
+
+            <TextView
+                android:id="@+id/catBurn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="화상"
+                android:textSize="24sp"
+                android:padding="12dp" />
+
+            <TextView
+                android:id="@+id/catCut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="베인상처"
+                android:textSize="24sp"
+                android:padding="12dp" />
+
+            <TextView
+                android:id="@+id/catBite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="벌레물림"
+                android:textSize="24sp"
+                android:padding="12dp" />
+
+        </LinearLayout>
+
+        <!-- 상처별로 내용이 변경됨 -->
+        <TextView
+            android:id="@+id/txtFirstAid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="응급 처치 방법"
+            android:textSize="22sp"
+            android:textColor="#111111"
+            android:background="#FFFFFF"
+            android:padding="25dp"
+            android:layout_marginTop="18dp" />
+
+        <Button
+            android:id="@+id/btnSaveRecord"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:text="결과 기록하기"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#5F86F2"
+            android:layout_gravity="center"
+            android:layout_marginTop="18dp" />
+
+        <Button
+            android:id="@+id/btnFindHospital"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:text="가까운 병원 찾기"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#5F86F2"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="결과가 잘못 되었나요?"
+            android:textSize="14sp"
+            android:layout_marginTop="18dp" />
+
+        <Button
+            android:id="@+id/btnReportError"
+            android:layout_width="130dp"
+            android:layout_height="38dp"
+            android:text="오류신고"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#000000"
+            android:layout_marginBottom="40dp" />
+
+    </LinearLayout>
+
+</ScrollView>

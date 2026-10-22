@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F6FF"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnBackHome"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:backgroundTint="#5F86F2"
+            android:text="⌂"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="결과 기록"
+            android:textColor="#111111"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- 제목을 가운데 두기 위한 공간 -->
+        <Space
+            android:layout_width="58dp"
+            android:layout_height="58dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnCamera"
+        android:layout_width="170dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#5F86F2"
+        android:text="촬영하기"
+        android:textColor="#FFFFFF"
+        android:textSize="21sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtEmptyRecord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="아직 저장된 분석 기록이 없습니다."
+        android:textColor="#777777"
+        android:textSize="17sp"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerRecords"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="25dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="30dp" />
+
+</LinearLayout>

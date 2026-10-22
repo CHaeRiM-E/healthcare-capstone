@@ -1,0 +1,181 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F9FD"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="💊 내 약 관리"
+            android:textColor="#202C43"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="약봉투 한 장으로 약 정보를 확인하고 복용 일정을 기록해요."
+            android:textColor="#66758B"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/imgMedicinePreview"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_medicine_card"
+            android:contentDescription="선택한 약봉투 사진"
+            android:padding="12dp"
+            android:scaleType="fitCenter" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnMedicineCamera"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1"
+                android:backgroundTint="#E5F0FF"
+                android:text="📷 사진 촬영"
+                android:textAllCaps="false"
+                android:textColor="#2563A6" />
+
+            <Button
+                android:id="@+id/btnMedicineGallery"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                android:backgroundTint="#E5F0FF"
+                android:text="갤러리에서 선택"
+                android:textAllCaps="false"
+                android:textColor="#2563A6" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnMedicineAnalyze"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#3A86FF"
+            android:text="약봉투 자동 분석하기"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/layoutMedicineSummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/bg_medicine_card"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📋 처방 정보"
+                android:textColor="#202C43"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtMedicineSummary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="#526071"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtMedicineSearchResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_med_soft"
+            android:padding="14dp"
+            android:textColor="#25334B"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/layoutMedicineSearchCards"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnMedicineAdd"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="6dp"
+            android:backgroundTint="#E5F0FF"
+            android:text="+ 빠진 약 추가하기"
+            android:textAllCaps="false"
+            android:textColor="#2563A6"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnMedicineSave"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#3A86FF"
+            android:text="복용 일정 확인하고 저장하기"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnMedicineRecord"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="14dp"
+            android:backgroundTint="#E5F0FF"
+            android:text="💊 저장한 처방 기록 보기"
+            android:textAllCaps="false"
+            android:textColor="#2563A6" />
+
+        <Button
+            android:id="@+id/btnToggleOcr"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#EFF2F8"
+            android:text="원본 인식 글자 보기 (필요할 때만)"
+            android:textAllCaps="false"
+            android:textColor="#64748B"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txtMedicineResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_medicine_card"
+            android:padding="14dp"
+            android:textColor="#526071"
+            android:textSize="13sp"
+            android:visibility="gone" />
+    </LinearLayout>
+</ScrollView>

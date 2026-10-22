@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F6FF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:text="←"
+                android:textSize="24sp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#5F86F2" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="오류 신고"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="#111111" />
+
+            <Button
+                android:id="@+id/btnHome"
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:text="⌂"
+                android:textSize="22sp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#5F86F2" />
+        </LinearLayout>
+
+        <!-- 오류 유형 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="오류 유형"
+            android:textSize="28sp"
+            android:textColor="#111111"
+            android:layout_marginTop="70dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(예: 분석 내용 오류, 사진 업로드 오류, 앱 실행 오류, 기타)"
+            android:textSize="16sp"
+            android:textColor="#111111"
+            android:layout_marginTop="15dp" />
+
+        <Spinner
+            android:id="@+id/editType"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#111111" />
+
+        <!-- 오류 내용 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="오류 내용"
+            android:textSize="28sp"
+            android:textColor="#111111"
+            android:layout_marginTop="60dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="어떤 문제가 발생했는지 입력해주세요"
+            android:textSize="16sp"
+            android:textColor="#444444"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/edtErrorContent"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:hint="발생한 오류를 자세히 입력해주세요."
+            android:textSize="16sp"
+            android:textColor="#111111"
+            android:gravity="top|start"
+            android:inputType="textMultiLine"
+            android:padding="12dp"
+            android:background="#FFFFFF"
+            android:layout_marginTop="15dp" />
+
+        <!-- 스크린샷 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="스크린샷 첨부(선택)"
+            android:textSize="28sp"
+            android:textColor="#111111"
+            android:layout_marginTop="70dp" />
+
+        <Button
+            android:id="@+id/btnUpload"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:text="업로드"
+            android:textSize="18sp"
+            android:textColor="#111111"
+            android:backgroundTint="#FFFFFF"
+            android:layout_marginTop="20dp" />
+        <ImageView
+            android:id="@+id/imgScreenshotPreview"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_marginTop="15dp"
+            android:scaleType="fitCenter"
+            android:background="#FFFFFF"
+            android:visibility="gone"
+            android:contentDescription="첨부한 스크린샷 미리보기" />
+
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="230dp"
+            android:layout_height="55dp"
+            android:text="오류 신고 제출"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#5F86F2"
+            android:layout_gravity="center"
+            android:layout_marginTop="90dp"
+            android:layout_marginBottom="40dp" />
+
+    </LinearLayout>
+
+</ScrollView>

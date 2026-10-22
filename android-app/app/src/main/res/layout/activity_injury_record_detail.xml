@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F7F8FA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="상처 기록 상세"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#111827"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="20dp" />
+
+        <ImageView
+            android:id="@+id/imgDetail"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:background="#E5E7EB"
+            android:contentDescription="상처 사진"
+            android:visibility="gone"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:id="@+id/txtDetailDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="기록 날짜"
+            android:textSize="14sp"
+            android:textColor="#6B7280"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:id="@+id/txtDetailName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="상처 종류"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#111827"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:id="@+id/txtDetailConfidence"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AI 신뢰도"
+            android:textSize="16sp"
+            android:textColor="#374151"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:id="@+id/txtDetailRisk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="위험 수준"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#111827"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="응급 안내"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#111827"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/txtDetailEmergency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="15sp"
+            android:textColor="#374151"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="응급처치 방법"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#111827"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/txtDetailFirstAid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="15sp"
+            android:textColor="#374151"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="28dp" />
+
+        <Button
+            android:id="@+id/btnDeleteRecord"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="기록 삭제"
+            android:textSize="16sp"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnDetailBack"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="목록으로 돌아가기"
+            android:textSize="16sp"
+            android:layout_marginBottom="24dp" />
+
+    </LinearLayout>
+
+</ScrollView>

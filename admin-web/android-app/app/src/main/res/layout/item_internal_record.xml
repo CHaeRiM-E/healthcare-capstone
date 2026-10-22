@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:padding="18dp"
+    android:layout_marginBottom="12dp">
+
+    <TextView
+        android:id="@+id/txtInternalDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="26-10-03 00:30"
+        android:textSize="13sp"
+        android:textColor="#777777" />
+
+    <TextView
+        android:id="@+id/txtInternalTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="배가 아파요"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:textColor="#222222" />
+
+    <TextView
+        android:id="@+id/txtInternalRisk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="응급도 : 주의"
+        android:textSize="15sp"
+        android:textColor="#555555" />
+
+    <TextView
+        android:id="@+id/txtInternalPreview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="첫 증상 : 배가 아프고 속이 좋지 않아요."
+        android:textSize="14sp"
+        android:textColor="#777777"
+        android:maxLines="2"
+        android:ellipsize="end" />
+
+</LinearLayout>

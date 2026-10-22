@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F6FF"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 상단 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:background="#FFFFFF">
+
+            <Button
+                android:id="@+id/btnDetailBack"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="←"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#5F86F2" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="14dp"
+                android:text="내상 상담 상세"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#222222" />
+
+        </LinearLayout>
+
+        <!-- 상세 정보 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:background="#FFFFFF">
+
+            <TextView
+                android:id="@+id/txtDetailDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="상담 날짜 · -"
+                android:textSize="14sp"
+                android:textColor="#777777" />
+
+            <TextView
+                android:id="@+id/txtDetailTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="증상"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:textColor="#222222" />
+
+            <TextView
+                android:id="@+id/txtDetailRisk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="응급도 · -"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#555555" />
+
+        </LinearLayout>
+
+        <!-- 전체 상담 내용 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="4dp"
+            android:text="상담 내용"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:textColor="#222222" />
+
+        <LinearLayout
+            android:id="@+id/detailChatContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp" />
+
+        <!-- 삭제 -->
+        <Button
+            android:id="@+id/btnDeleteRecord"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginTop="10dp"
+            android:text="기록 삭제"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#D85A5A" />
+
+        <Button
+            android:id="@+id/btnBackToList"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="25dp"
+            android:text="목록으로 돌아가기"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#5F86F2" />
+
+    </LinearLayout>
+
+</ScrollView>
